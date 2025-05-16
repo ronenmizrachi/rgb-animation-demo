@@ -1,0 +1,100 @@
+.feature-article {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* דסקטופ כברירת מחדל */
+  gap: 4rem;
+  align-items: start;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.feature-article .image {
+  width: 100%;
+}
+
+.feature-article .text {
+  flex: 1;
+  display: flex; /* 👈 הפעלת Flexbox פנימי */
+  flex-direction: column; /* תור — כותרת מעל פסקה מעל כפתור */
+  justify-content: flex-start; /* הכל מיושר למעלה */
+  gap: 0.2rem; /* רווח בין האלמנטים */
+}
+
+h1 {
+  font-size: clamp(3rem, 4vw, 7rem);
+  line-height: 110%;
+  font-family: var(--font-headline);
+  font-variation-settings: "wght" 600, "wdth" 70;
+  margin-bottom: 0;
+}
+
+/* מסך צר: שבירה לעמודה אחת */
+@media (max-width: 767px) {
+  .feature-article {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "text";
+    gap: 1rem;
+  }
+}
+
+.feature-article button {
+  font-family: "scale-variable", sans-serif;
+  letter-spacing: 1px;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  width: fit-content;
+  transition: background 0.3s ease;
+}
+
+.feature-article button:hover {
+  background: #b30000;
+}
+
+.feature-article .image {
+  width: 100%; /* תא התמונות תופס את ה־2fr שלו */
+}
+
+.feature-article .image img {
+  width: 100%; /* התמונה ממלאת את התא */
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+.fancy-gsap-button {
+  position: relative;
+  overflow: hidden;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: none; /* אנחנו שולטים דרך GSAP */
+}
+
+.fancy-gsap-button .flare {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 0;
+}
+
+.fancy-gsap-button .label {
+  position: relative;
+  z-index: 1;
+}

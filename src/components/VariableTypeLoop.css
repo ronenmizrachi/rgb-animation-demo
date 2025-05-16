@@ -1,0 +1,20 @@
+.variable-type-loop {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  background: transparent;
+  padding: 2rem;
+  text-align: center;
+}
+
+.variable-type-loop h1 {
+  font-family: "scale-variable", sans-serif;
+  font-size: 3rem;
+  font-variation-settings: "wght" 400, "wdth" 100;
+  transition: all 0.3s ease;
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin: 0;
+}

@@ -1,0 +1,51 @@
+.quote-feature {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px;
+  border-color: black;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.quote-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+  max-width: 100%;
+}
+
+.quote-text {
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translate(-20%, -50%);
+  font-family: var(--font-headline);
+  font-variation-settings: "wght" 600, "wdth" 50;
+  font-size: clamp(1.7rem, 3vw, 4rem);
+  line-height: 110%;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+.quote-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  margin-right: 0.1rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .quote-image img {
+    height: 500px;
+  }
+  .quote-text {
+    left: 50%;
+  }
+}

@@ -1,0 +1,41 @@
+.story-template {
+  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.story-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: transparent;
+  pointer-events: none;
+}
+
+.story-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.story-template h1 {
+  position: relative;
+  z-index: 1;
+  font-family: "scale-variable", sans-serif;
+  font-size: clamp(2rem, 4vw, 5rem);
+  font-variation-settings: "wght" 400, "wdth" 100;
+  line-height: 1.2;
+  color: var(--color-primary);
+  margin: 0;
+  text-align: center;
+  padding: 1rem;
+  max-width: 90%;
+}
