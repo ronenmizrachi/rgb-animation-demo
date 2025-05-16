@@ -6,15 +6,16 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^5.0.0",
     "gsap": "3.13.0",
     "react-gsap": "3.2.1"
   },
   "devDependencies": {
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11"
+    "@types/react": "17.0.39",
+    "@types/react-dom": "17.0.11",
+    "typescript": "5.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
